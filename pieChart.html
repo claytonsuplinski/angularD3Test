@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="AngularD3PieChart">
+<head>
+<title>Pie Chart</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="main.css">
+<style>
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+</style>
+<script type="text/javascript" src="js/prototype.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>   
+</head>
+<body>
+<div id="title" onclick="location.href='index.html';">Angular & D3 Introduction</div>
+<br><br>
+
+<div id="mainContainer">
+<piechart id="d3pie" datajson="pieChart.json"
+                    xaxis-name = ""
+                    xaxis-pos = ""
+                    yaxis-name = ""
+                    yaxis-pos = ""
+                    d3-format= "" />
+<!-- angular directive is piechart -->
+<!-- directive variables are xaxis-name,yaxis-name,xaxis-pos,yaxis-pos,y axis data format(d3-format)
+and finally the datajson variable which is holding the external data source -->
+</div>
+<script src="js/pieChartProto.js"></script>
+<script src="js/angulard3piechart.js"></script>
+</body>
+</html>

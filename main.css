@@ -1,0 +1,28 @@
+*{
+font-family:helvetica;
+overflow:visible;
+}
+
+body{
+margin:0px;
+background:#9d89df;
+}
+
+#title{
+top:0;left:0;
+width:100%;font-size:24px;
+padding-top:1vw;padding-bottom:1vw;
+background:#443355;
+color:white;
+text-align:center;
+cursor:pointer;
+
+-webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+#mainContainer{
+width:100%;
+text-align:center;
+}

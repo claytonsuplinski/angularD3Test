@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="AngularD3SctterplotChart">
+<head>
+<title>Scatter Plot</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="main.css">
+<style>
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+</style>
+<script type="text/javascript" src="js/prototype.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>   
+</head>
+<body>
+<div id="title" onclick="location.href='index.html';">Angular & D3 Introduction</div>
+<br><br>
+
+<div id="mainContainer">
+<scatterplotchart id="d3scatterplot" datajson="scatterPlot.json"
+                    xaxis-name = "Sepal Width (cm)"
+                    xaxis-pos = ""
+                    yaxis-name = "Sepal Length (cm)"
+                    yaxis-pos = "8"
+                    d3-format= "" />
+<!-- angular directive is scatterplotchart -->
+<!-- directive variables are xaxis-name,yaxis-name,xaxis-pos,yaxis-pos,y axis data format(d3-format)
+and finally the datajson variable which is holding the external data source -->
+</div>
+<script src="js/scatterplotProto.js"></script>
+<script src="js/angulard3scatterplot.js"></script>
+</body>
+</html>

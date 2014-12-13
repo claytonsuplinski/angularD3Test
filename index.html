@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<link rel="stylesheet" type="text/css" href="main.css">
+<style>
+
+#links{
+margin-left:10%;margin-right:10%;
+width:80%;
+}
+
+#links tr:nth-child(odd)	{
+background-color: #dddddd;
+-webkit-box-shadow: 2px 1px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 1px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 2px 1px 5px 0px rgba(0,0,0,0.75);
+}
+#links tr:nth-child(even) {
+background-color: #ffffff;
+-webkit-box-shadow: 2px 1px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 1px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 2px 1px 5px 0px rgba(0,0,0,0.75);
+}
+
+#links td:hover{
+cursor:pointer;
+background:lightblue;
+}
+
+.tableLink{
+color:black;
+text-decoration:none;
+display:block;
+padding:1vw;
+}
+</style>
+</head>
+
+<body>
+<div id="title" onclick="location.href='index.html';">Angular & D3 Introduction</div>
+<br><br>
+
+<div id="mainContainer">
+<div ng-app="myApp" ng-controller="loadTable">
+	 <table id="links">
+	  <tr ng-repeat="x in names | orderBy : 'Country'">
+		<td><a class="tableLink" ng-href="{{x.link}}">{{ x.name }}</a></td>
+	  </tr>
+	</table> 
+</div>
+</div>
+
+<script>
+
+var app = angular.module("myApp", []);
+
+app.controller("loadTable", function($scope) {
+    $scope.names = [{name: "Bar Graph", link: "barGraph.html"},
+					{name: "Scatter Plot", link: "scatterPlot.html"},
+					{name: "Pie Chart", link: "pieChart.html"},
+					{name: "Red-Black Tree (tree is incorrect)", link: "redBlackTree.html"},
+					{name: "Donut Chart", link: ""},
+					{name: "Donut Multiples", link: ""},
+					{name: "Area Chart", link: ""},
+					{name: "Line Chart", link: ""}]
+});
+
+</script>
+
+</body>
+</html> 
