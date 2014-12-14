@@ -46,12 +46,13 @@ padding:1vw;
 <div id="mainContainer">
 <div ng-app="myApp" ng-controller="loadTable">
 	 <table id="links">
-	  <tr ng-repeat="x in names | orderBy : 'Country'">
+	  <tr ng-repeat="x in names">
 		<td><a class="tableLink" ng-href="{{x.link}}">{{ x.name }}</a></td>
 	  </tr>
 	</table> 
 </div>
 </div>
+<br><br>
 
 <script>
 
@@ -59,13 +60,23 @@ var app = angular.module("myApp", []);
 
 app.controller("loadTable", function($scope) {
     $scope.names = [{name: "Bar Graph", link: "barGraph.html"},
+					{name: "Group Bar Graph", link: "groupBarGraph.html"},
 					{name: "Scatter Plot", link: "scatterPlot.html"},
+					{name: "Scatterplot Matrix", link: "scatterplotMatrix.html"},
+					{name: "Sunburst Partition", link: "sunburst.html"},
+					{name: "Box Plot", link: "boxPlot.html"},
 					{name: "Pie Chart", link: "pieChart.html"},
+					{name: "Circle Diagram", link: "circleDiagram.html"},
+					{name: "Chord Diagram", link: "chordDiagram.html"},
 					{name: "Red-Black Tree (tree is incorrect)", link: "redBlackTree.html"},
 					{name: "Donut Chart", link: ""},
 					{name: "Donut Multiples", link: ""},
 					{name: "Area Chart", link: ""},
-					{name: "Line Chart", link: ""}]
+					{name: "Line Chart", link: ""},
+					{name: "Speedometer", link: "speedometer.html"},
+					{name: "US Map", link: "usMap.html"},
+					{name: "Circular Bracket", link: "circularBracket.html"},
+					{name: "Dashboard", link: "dashboard.html"}]
 });
 
 </script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="AngularD3GroupbarChart">
+<head>
+<title>Group Bar Graph</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="main.css">
+<style>
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: lightblue;
+}
+</style>
+<script type="text/javascript" src="js/prototype.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>   
+</head>
+<body>
+<div id="title" onclick="location.href='index.html';">Angular & D3 Introduction</div>
+<br><br>
+
+<div id="mainContainer">
+<groupbarchart id="d3groupbar" datajson="groupBarGraph.json"
+                    xaxis-name = ""
+                    xaxis-pos = ""
+                    yaxis-name = "Population"
+                    yaxis-pos = "8"
+                    d3-format= "">
+<!-- angular directive is groupbarchart -->
+<!-- directive variables are xaxis-name,yaxis-name,xaxis-pos,yaxis-pos,y axis data format(d3-format)
+and finally the datajson variable which is holding the external data source -->
+</div>
+<script src="js/groupBarGraphProto.js"></script>
+<script src="js/angulard3groupbargraph.js"></script>
+</body>
+</html>
